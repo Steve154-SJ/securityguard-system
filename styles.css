@@ -16,8 +16,10 @@ body {
 
 .login-container {
     display: flex;
-    /*Flex-direction make it at the column displays it veritcally */
+    
+    /*Flex-direction:column -- displays flex-items veritcally */
     flex-direction: column;
+
     justify-content: center;
     align-items: center;
     height: 100%;
