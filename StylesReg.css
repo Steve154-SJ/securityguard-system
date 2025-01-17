@@ -13,13 +13,29 @@ body {
     color: #1f1c1c;
 }
 .new-reg {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center; 
-    padding: 30px;
-    background:white; 
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 450px; /* Container width */
-}
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center; 
+        padding: 40px;
+        background: white; 
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 400px; 
+        height: 450px; 
+    }
+    .extra-spacing {
+        margin: 15px;
+        width: 100%; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;
+    }   
+    .new-password {
+        font-size: 14px;
+        color: #351791; 
+        text-decoration: none;
+        margin-top: 15px; 
+        transition: color 0.3s ease;
+    }
