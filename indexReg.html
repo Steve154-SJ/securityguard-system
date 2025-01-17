@@ -7,28 +7,36 @@
     <link rel="stylesheet" href="StylesReg.css">
     </head>
 <body>
+    <div class="new-reg">
         <form method="POST" action=" ">
-            <div class="new-reg">
-            <label for="fname">First Name:</label>
-            <input type="text" id="fname" value="fname" required>
+            <div class="extra-spacing">
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="name"  required>
             </div>
 
-            <div class="new-reg">
-                <label for="lname">Last Name:</label>
-                <input type="text" id="lname" name="lname" required>
+            <div class="extra-spacing">
+                <label for="name">Last Name:</label>
+                <input type="text" id="name" name="name"  required>
             </div>
             
-            <div class="new-reg">
-                <label for="password">Password:</label>
-                <input type="password" id="password" value="password" required>
-            </div>
-
-            <div class="new-reg">
+            <div class="extra-spacing">
                 <label for="number">Phone No:</label>
                 <input type="number" id="number" value="numbers" required>
             </div>
-        </form> 
+            
+            <div class="extra-spacing">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
 
+            <div class="submit">
+                <input type="submit" id="submit" name="submit">
+            </div>
+        </form> 
+    <a href="#" class="new-password">Forgot Password?</a>
+
+            <p class="register-link">Already Exists? <a href="index.html">Login In</a></p>
     </div>
 </body>
+<footer></footer>
 </html>

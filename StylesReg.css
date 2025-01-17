@@ -1,3 +1,25 @@
-body{
-    background-color: azure;
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #74C3DF, #78c9ad);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #1f1c1c;
+}
+.new-reg {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    padding: 30px;
+    background:white; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px; /* Container width */
 }

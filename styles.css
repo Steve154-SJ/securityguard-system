@@ -42,7 +42,7 @@ body {
 }
 
 .input-group input {
-    width: 150%; 
+    width: 100%; 
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
@@ -50,13 +50,11 @@ body {
     outline: none;
     background-color: rgba(171, 168, 168, 0.858);
     box-sizing: border-box;
-   
-    
 }
 
 button {
     width:150px; 
-    padding: 10px;
+    padding: 20px;
     font-size: 20px;
     font-style: unset;
     font-weight: bold;
@@ -79,6 +77,7 @@ button:hover {
 button:active {
     transform: scale(0.95); 
 }
+
 .forgot-password {
     font-size: 14px;
     color: #351791; 
