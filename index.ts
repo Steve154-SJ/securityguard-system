@@ -1,26 +1,41 @@
 
-const ADMIN_CREDENTIALS = {
-    username: "ashok",
-    password: "admin123",
+const adminCredentials = {
+    username: 'admin',
+    id: '12345',
+    password: 'adminpass'
   };
-
-  const loginForm = document.getElementById("loginForm") as HTMLFormElement;
-  const errorMessage = document.getElementById("errorMessage") as HTMLElement;
+  
+ 
+  document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('login-form') as HTMLFormElement;
+  
+    if (loginForm) {
+      loginForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent default form submission
+  
+      
+        const usernameInput = document.getElementById('username') as HTMLInputElement;
+        const idInput = document.getElementById('id') as HTMLInputElement;
+        const passwordInput = document.getElementById('password') as HTMLInputElement;
+  
+        const username = usernameInput.value;
+        const id = idInput.value;
+        const password = passwordInput.value;
   
 
-  loginForm.addEventListener("submit", (event) => {
-    event.preventDefault(); 
+        if (username === adminCredentials.username && id === adminCredentials.id && password === adminCredentials.password) {
 
-    const username = (document.getElementById("username") as HTMLInputElement).value.trim();
-    const password = (document.getElementById("password") as HTMLInputElement).value.trim();
+          window.location.href = 'admin.html'; 
+        } else {
+
+          alert('Invalid credentials. Please try again.');
   
-
-    if (username === ADMIN_CREDENTIALS.username && password === ADMIN_CREDENTIALS.password) {
-
-      window.location.href = "admin.html";
+         
+          passwordInput.value = '';
+        }
+      });
     } else {
-
-      errorMessage.style.display = "block";
+      console.error('Login form not found');
     }
   });
   
