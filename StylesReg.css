@@ -32,10 +32,26 @@ body {
         align-items: center; 
         justify-content: center;
     }   
+    button{
+        display: block;
+        font-size: 20px;
+        width: 150px;
+        margin: 15px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        text-align: center;
+    }
     .new-password {
         font-size: 14px;
         color: #351791; 
         text-decoration: none;
-        margin-top: 15px; 
+        margin-top: 20px; 
         transition: color 0.3s ease;
+    }
+    .extra-spacing input{
+        background-color: rgb(211, 211, 211);
+        size: 200px;
+
     }
