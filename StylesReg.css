@@ -19,24 +19,17 @@ body {
     align-items: center; 
     padding: 20px;
     background:white; 
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 450px; /* Container width */
     }
-    /* .extra-spacing {
-        margin: 15px;
-        width: 100%; 
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        justify-content: center;
-    }    */
+  
     button{
         display: block;
         font-size: 20px;
         width: 150px;
         margin: 15px;
-        padding: 20px;
+        padding: 10px;
         margin-left: auto;
         margin-right: auto;
         justify-content: center;
