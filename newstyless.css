@@ -10,7 +10,18 @@ body{
     margin: auto;
     border: 05px solid black;
     width:max-content;
-    height: 300px;
+    height: 350px;
     text-align: center;
     font-family: sans-serif;
+}
+.extra-spacing label{
+    color: whitesmoke;
+    padding: 10px;
+
+}
+.extra-spacing input{
+    padding: 5px;;
+}
+.extra-spacing{
+    padding:10px;
 }
