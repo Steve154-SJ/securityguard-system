@@ -1,8 +1,16 @@
+body{
+    background-color: rgba(132, 126, 214, 0.776);
+}
+
 .new-reg{
     display: flexbox;
     background-color: grey;
     padding: 80px;
     border-radius: 40px;
-    margin: 40px;
+    margin: auto;
     border: 05px solid black;
+    width:max-content;
+    height: 300px;
+    text-align: center;
+    font-family: sans-serif;
 }
