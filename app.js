@@ -16,10 +16,13 @@ Bonus -->To exit from nodemon enter "ctrl + c" twice
 const express = require('express');
 const path = require('path');
 
+
 //invoke module
 const app = express();
 
+//Use Properties for all Method
 app.use(express.static("./public"))
+app.use(express.urlencoded({extended:false}))
 
 app.get("/",(req,res)=>{
     
@@ -36,6 +39,9 @@ app.get("/indexReg.html",(req,res)=>{
 
 //Post Request on progress
 app.post("/api/userLogin",(req,res)=>{
+    //Access to form value
+    console.log(req.body);
+    
     res.status(200).send("Signed in Successfully");
 })
 
