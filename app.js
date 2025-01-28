@@ -34,6 +34,15 @@ app.get("/indexReg.html",(req,res)=>{
     res.status(200).sendFile(path.resolve(__dirname,"./indexReg.html"))
 })
 
+//Post Request on progress
+app.post("/api/userLogin",(req,res)=>{
+    res.status(200).send("Signed in Successfully");
+})
+
+app.post("/api/userRegistered",(req,res)=>{
+    res.status(200).send("Registration completed");
+})
+
 app.all("*",(req,res)=>{
     res.status(404).send("<h1>Status 404: Page not found</h1>")
 })
