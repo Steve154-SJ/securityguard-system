@@ -1,4 +1,5 @@
 /*
+---------------------------------------------------------------------------------------------------------------------------------------
 step to follow:
 
 1. check in folder and file section if package.json file and other files are there
@@ -10,50 +11,39 @@ step to follow:
 6. navigate to port:5000 on a browser
 
 Bonus -->To exit from nodemon enter "ctrl + c" twice
+----------------------------------------------------------------------------------------------------------------------------------------
 */
 
-//import module 
-const express = require('express');
-const path = require('path');
+// imports
+const express = require("express");
 
+const UserStaticRoute = require("./routes/staticRoutes");
+const {connectToMongoDB} = require("./connect")
 
-//invoke module
+// declaration 
 const app = express();
+const PORT = 5000
 
-//Use Properties for all Method
-app.use(express.static("./public"))
-app.use(express.urlencoded({extended:false}))
 
-app.get("/",(req,res)=>{
-    
-    res.status(200).sendFile(path.resolve(__dirname,"./index.html"))
+//Connection
+connectToMongoDB("mongodb://127.0.0.1:27017/Security-Guard-System_DB")
+.then(()=>{
+    console.log("MongoDB Connected");
 })
+.catch((err)=>{
+    console.log(`MongoDB ERROR:${err}`);
+});
 
-app.get("/index.html",(req,res)=>{
-    res.status(200).sendFile(path.resolve(__dirname,"./index.html"))
-})
 
-app.get("/indexReg.html",(req,res)=>{
-    res.status(200).sendFile(path.resolve(__dirname,"./indexReg.html"))
-})
+// Middleware-plugin 
+app.use(express.urlencoded({extended:false}));
 
-//Post Request on progress
-app.post("/api/userLogin",(req,res)=>{
-    //Access to form value
-    console.log(req.body);
-    
-    res.status(200).send("Signed in Successfully");
-})
 
-app.post("/api/userRegistered",(req,res)=>{
-    res.status(200).send("Registration completed");
-})
+// Routes 
+app.use("/api",UserStaticRoute);
 
-app.all("*",(req,res)=>{
-    res.status(404).send("<h1>Status 404: Page not found</h1>")
-})
 
-//run server on port:5000
-app.listen(5000,()=>{
-    console.log("Server is listening on port:5000");
+//Start Server 
+app.listen(PORT,()=>{
+    console.log(`Server Started at PORT:${PORT}`);
 })

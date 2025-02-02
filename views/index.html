@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+   <div class="login-container">
+      
+            <h2>Login</h2>
+            <!-- Action specified -->
+            <form action="/api/userLogin" method="POST">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="id">ID No:</label>
+                    <!-- Changes made from number to text for easy usage  -->
+                    <input type="text" id="id" name="id" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">LOG IN</button>
+            </form>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+
+            <p class="register-link">Are you a new agent? <a href="indexReg.html">Register here</a></p>
+      
+    </div>
+
+</body>
+</html>
+
