@@ -22,7 +22,7 @@ const {connectToMongoDB} = require("./connect")
 
 // declaration 
 const app = express();
-const PORT = 5000
+const PORT = 5003
 
 
 //Connection
@@ -37,7 +37,7 @@ connectToMongoDB("mongodb://127.0.0.1:27017/Security-Guard-System_DB")
 
 // Middleware-plugin 
 app.use(express.urlencoded({extended:false}));
-
+app.use(express.static("./public"));
 
 // Routes 
 app.use("/api",UserStaticRoute);
@@ -47,3 +47,4 @@ app.use("/api",UserStaticRoute);
 app.listen(PORT,()=>{
     console.log(`Server Started at PORT:${PORT}`);
 })
+//checks
