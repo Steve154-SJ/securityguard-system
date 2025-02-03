@@ -10,20 +10,20 @@
     <div class="new-reg">
         <h2>Register</h2>
         <!-- Action specified -->
-        <form action="/api/userRegistered" method="POST">
+        <form action="" method="POST">
             <div class="extra-spacing">
-            <label for="name">First Name</label>
-            <input type="text" id="name" name="name"  required>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname"  required>
             </div>
 
             <div class="extra-spacing">
-                <label for="name">Last Name</label>
-                <input type="text" id="name" name="name"  required>
+                <label for="lname">Last Name (Optional)</label>
+                <input type="text" id="lname" name="lname">
             </div>
             
             <div class="extra-spacing">
                 <label for="number">Phone No</label>
-                <input type="text" id="number" name="numbers" required>
+                <input type="text" id="number" name="number" required>
             </div>
             
             <div class="extra-spacing">
@@ -35,7 +35,7 @@
                 <button type="submit">Register</button>
             </div>
         </form> 
-            <p class="register-link">Already Exists? <a href="Login.html">Login</a></p>
+            <p class="register-link">Already Exists? <a href="/api/login">Login</a></p>
     </div>
 </body>
 <footer></footer>

@@ -17,12 +17,13 @@ Bonus -->To exit from nodemon enter "ctrl + c" twice
 // imports
 const express = require("express");
 
-const UserStaticRoute = require("./routes/staticRoutes");
+const staticRoute = require("./routes/staticRoutes");
+const userRoute = require("./routes/user");
 const {connectToMongoDB} = require("./connect")
 
 // declaration 
 const app = express();
-const PORT = 5003
+const PORT = 5000;
 
 
 //Connection
@@ -40,7 +41,9 @@ app.use(express.urlencoded({extended:false}));
 app.use(express.static("./public"));
 
 // Routes 
-app.use("/api",UserStaticRoute);
+app.use("/api",staticRoute);
+app.use("/api",userRoute);
+app.use("/",staticRoute);
 
 
 //Start Server 
