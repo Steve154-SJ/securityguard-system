@@ -21,11 +21,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(214, 209, 209);
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
-    width:450px;
-    height: 500px;
+    width:520px;
+    height: 520px;
     text-align: center;
     font-family: sans-serif;
 }
@@ -68,4 +68,13 @@ body{
     cursor: pointer;
     transition: transform 0.3s ease, background 0.3s ease;
     margin: 10px auto;
+}
+
+.submit button:hover {
+    background: linear-gradient(#a483ff, #96e5ff);
+    transform: scale(1.05);
+}
+
+.submit button:active {
+    transform: scale(0.95); 
 }
