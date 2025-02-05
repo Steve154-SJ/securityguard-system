@@ -12,7 +12,10 @@ const handleSignupPage = (req,res)=>{
 }
 
 const handleLoginPostReq = async(req,res)=>{
-
+    const {id,password} = req.body;
+    console.log(id,password);
+    return res.redirect("/api/login")
+    
 }
 
 const hanleSignupPostReq = async(req,res)=>{
