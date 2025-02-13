@@ -3,6 +3,11 @@ const mongoose = require("mongoose")
 
 // Schema 
 const userSchema = mongoose.Schema({
+    regNo:{
+        type: String,
+        required: true,
+        unique: true,
+    },
     firstName:{
         type: String,
         required: true,
