@@ -3,7 +3,7 @@ let i = 1;
 function formatedDigit(number) {
     number = number.toString();
 
-    while(number.length < 4) {
+    while(number.length < 3) {
         number = "0" + number;
     }
 
