@@ -28,7 +28,6 @@ const handleLoginPostReq = async(req,res)=>{
 }
 
 const hanleSignupPostReq = async(req,res)=>{
-    console.log(req.body);
     const regNo = generateRegNo();
     const {fname,lname,number,password}= req.body;
     const result = await User.create({

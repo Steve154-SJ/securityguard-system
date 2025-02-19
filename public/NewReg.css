@@ -9,7 +9,7 @@ body, html {
     font-family: Arial, sans-serif;
 }
 body{
-    background-color: rgba(132, 126, 214, 0.776);
+    background: linear-gradient(135deg, #5c8b9c, #4d245e);
     display: flex;
     justify-content: center;
     align-items: center;
