@@ -27,9 +27,11 @@ const handleLoginPostReq = async(req,res)=>{
     
 }
 
-const hanleSignupPostReq = async(req,res)=>{
+const handleSignupPostReq = async(req,res)=>{
     const regNo = generateRegNo();
     const {fname,lname,number,password}= req.body;
+    console.log(fname,lname,number,password);
+    
     const result = await User.create({
         regNo: regNo,
         firstName:fname,
@@ -37,6 +39,7 @@ const hanleSignupPostReq = async(req,res)=>{
         number:number,
         password:password,
     })
+    
     return res.status(200).redirect("/homepage");
     
 }
@@ -46,5 +49,5 @@ module.exports = {
     handleLoginPage,
     handleSignupPage,
     handleLoginPostReq,
-    hanleSignupPostReq,
+    handleSignupPostReq,
 }
