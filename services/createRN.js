@@ -1,4 +1,4 @@
-let i = 1;
+let i = 0;
 
 function formatedDigit(number) {
     number = number.toString();
@@ -10,7 +10,8 @@ function formatedDigit(number) {
     return number;
 }
 
-const generateRegNo = ()=>{
+
+const generateRegNo = async()=>{
     const year = new Date().getFullYear().toString().slice(-2);
     const regNo = "NNM"+year+"CS"+formatedDigit(i++);
     return regNo;

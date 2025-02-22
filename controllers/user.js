@@ -4,14 +4,20 @@ const User = require("../models/user");
 const {generateRegNo} = require("../services/createRN");
 const {setUser,getUser} = require("../services/auth");
 
+// Page Loades --------------------------------------------------------------------------------------------
+//Handles Login Page load
 const handleLoginPage = (req,res)=>{
     return res.status(200).sendFile(path.resolve(__dirname,"../views/Login.html"));
 }
 
+//Handles Sign-up Page Load
 const handleSignupPage = (req,res)=>{
     return res.status(200).sendFile(path.resolve(__dirname,"../views/NewReg.html"));
 }
 
+// Post Requests --------------------------------------------------------------------------------------------
+
+//Handles Login Post request
 const handleLoginPostReq = async(req,res)=>{
     const {username,id,password} = req.body;
     
@@ -27,10 +33,11 @@ const handleLoginPostReq = async(req,res)=>{
     
 }
 
+//Handles Signup Post request
 const handleSignupPostReq = async(req,res)=>{
     const regNo = generateRegNo();
     const {fname,lname,number,password}= req.body;
-    console.log(fname,lname,number,password);
+    console.log(regNo,fname,lname,number,password);
     
     const result = await User.create({
         regNo: regNo,
@@ -44,7 +51,7 @@ const handleSignupPostReq = async(req,res)=>{
     
 }
 
-// exports
+// exports ----------------------------------------------------------------------------------------
 module.exports = {
     handleLoginPage,
     handleSignupPage,
