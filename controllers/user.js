@@ -35,9 +35,8 @@ const handleLoginPostReq = async(req,res)=>{
 
 //Handles Signup Post request
 const handleSignupPostReq = async(req,res)=>{
-    const regNo = generateRegNo();
+    const regNo = await generateRegNo();
     const {fname,lname,number,password}= req.body;
-    console.log(regNo,fname,lname,number,password);
     
     const result = await User.create({
         regNo: regNo,

@@ -1,4 +1,16 @@
-let i = 0;
+const User = require("../models/user");
+
+
+const CountNoOFEntries = async()=>{
+    try{
+        let count = await User.countDocuments();
+        return count;
+    } catch(err)
+    {
+        console.log("Error Occurred: ",err);
+    }
+
+}
 
 function formatedDigit(number) {
     number = number.toString();
@@ -13,7 +25,8 @@ function formatedDigit(number) {
 
 const generateRegNo = async()=>{
     const year = new Date().getFullYear().toString().slice(-2);
-    const regNo = "NNM"+year+"CS"+formatedDigit(i++);
+    let count = await CountNoOFEntries();
+    const regNo = "NNM"+year+"CS"+formatedDigit(++count);
     return regNo;
 }
 
