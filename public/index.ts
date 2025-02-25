@@ -27,7 +27,6 @@ const adminCredentials = {
 
           window.location.href = 'admin.html'; 
         } else {
-
           alert('Invalid credentials. Please try again.');
   
          
