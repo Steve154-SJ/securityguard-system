@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>s</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .pass{
+            background-color: rgb(181, 181, 181);
+            border: 2px solid black;
+        width: 200px;
+        height: 25px;
+        display: flex;
+        overflow: hidden;
+
+
+        }
+        .pass input{
+            height: inherit;
+            width: 170px;
+            background-color: transparent;
+            border: none;
+        }
+        .pass input:focus{
+            border: none;
+            outline: none;
+
+        }
+        .pass button {
+            border: none;
+            background-color: red;
+            height: inherit;
+            width:30px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <label for="name">username:</label>
+        <input type="text" id="name">
+        
+        <label for="password">password:</label>
+        <div class="pass">
+            <input type="password" id="password">
+            <button id="showpass" type="button">s</button>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="./test.js"></script>
+</body>
+</html>

@@ -8,4 +8,4 @@ const connectToMongoDB = (url)=>{
 // exports
 module.exports = {
     connectToMongoDB,
-}
+}   

@@ -50,3 +50,4 @@ app.use("/",staticRoute);
 app.listen(PORT,()=>{
     console.log(`Server Started at PORT:${PORT}`);
 })
+    
